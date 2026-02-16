@@ -1,6 +1,10 @@
 import app from './app';
+import dotenv from 'dotenv';
 
-const port = process.env.S_PORT;
+dotenv.config();
+
+const port = Number(process.env.S_PORT);
+
 app.listen(port, () => {
   console.log(`Server läuft auf Port ${port}`);
 });
